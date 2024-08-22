@@ -24,7 +24,7 @@ const Content: React.FC = () => (
           data-aos-delay="800"
           className="text-cyan-500 text-4xl mb-4"
         >
-          I am Nahuel Carrizo
+          I am Kevin Savsani
         </h1>
         <p
           data-aos="fade-up"
