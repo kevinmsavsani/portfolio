@@ -44,7 +44,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <Disclosure as="nav" className="fixed top-0 left-0 right-0 z-[1000] text-xl bg-white text-gray-950 flex items-center justify-between px-[8%] py-2 dark:bg-gray-950 dark:text-white font-bold shadow-lg">
+    <Disclosure as="nav" className="fixed top-0 left-0 right-0 z-[1000] text-xl bg-white text-gray-950 flex items-center justify-between px-[8%] py-2 dark:bg-black dark:text-white font-bold shadow-lg">
       {({ open }) => (
         <>
           <div className="w-full px-2 sm:px-6 lg:px-8">
