@@ -80,7 +80,7 @@ const Content: React.FC = () => (
           to="about"
           smooth={true}
           duration={500}
-          className="absolute bottom-10 left-1/2 cursor-pointer border-2 border-white rounded-full h-12 w-8 flex items-center justify-center"
+          className="absolute bottom-20 left-1/2 cursor-pointer border-2 border-white rounded-full h-12 w-8 flex items-center justify-center"
           data-aos="fade-up"
         >
           <FontAwesomeIcon icon={faArrowDownSolid} className="text-white" />

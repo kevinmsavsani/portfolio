@@ -10,7 +10,7 @@ import React from "react";
 import Typical from "react-typical";
 
 const ContactSection: React.FC = () => (
-  <section className="mt-12 bg-black" id="contactos">
+  <section className=" bg-black bg-opacity-95 py-8" id="contactos">
     <h2 className="text-center text-4xl font-semibold mb-8 text-white">
       Contact
     </h2>
@@ -42,7 +42,7 @@ const ContactSection: React.FC = () => (
       </span>
     </h3>
 
-    <div className="flex flex-wrap justify-center mt-24 mb-24 space-x-4">
+    <div className="flex flex-wrap justify-center mt-24 space-x-4">
       {contactLinks.map(({ href, iconClass, label, colorClass }, index) => (
         <a
           key={index}

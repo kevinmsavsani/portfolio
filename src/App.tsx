@@ -5,7 +5,6 @@ import 'aos/dist/aos.css';
 import Header from './components/Header';
 import HomeSection from './components/HomeSection';
 import AboutSection from './components/AboutSection';
-import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -25,7 +24,6 @@ const App: React.FC = () => {
       <main className="mx-auto mt-16">
         <HomeSection />
         <AboutSection />
-        <ServicesSection />
         <ProjectsSection />
         <ContactSection />
       </main>
