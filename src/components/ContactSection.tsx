@@ -67,7 +67,7 @@ const ContactSection: React.FC = () => (
                 }}
               ></span>
             ))}
-            <FontAwesomeIcon icon={iconClass} className="text-2xl" />
+            <FontAwesomeIcon icon={iconClass} className="text-4xl" />
             <div className="absolute left-1/2 bottom-[-10px] transform -translate-x-1/2 text-2xl font-semibold opacity-0 transition-opacity ease-in-out duration-300 group-hover:opacity-100">
               {label}
             </div>
