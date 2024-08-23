@@ -1,18 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
 const AboutSection = () => {
   return (
-    <div className="bg-white text-gray-700 dark:bg-black dark:text-white ">
-      {" "}
+    <div
+      id="about"
+      className="bg-white text-gray-700 dark:bg-black dark:text-white "
+    >
       <h2 className="text-center text-4xl font-semibold mb-8 text-white">
-        Contact
+        About me
       </h2>
-      <section
-        className="p-6"
-        id="sobre-mi"
-      >
+      <section className="p-6" id="sobre-mi">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div
             className="flex flex-col p-4 shadow-lg rounded-lg"
@@ -36,24 +34,28 @@ const AboutSection = () => {
             </p>
             <ul className="flex flex-col pl-5 text-gray-500 text-xl gap-4">
               <li className="mb-2">
-                  <span className=" font-bold text-gray-700  dark:text-white">
-                    <FormattedMessage id="years" defaultMessage="Age:" />
-                  </span>
-                  26
+                <span className=" font-bold text-gray-700  dark:text-white">
+                  <FormattedMessage id="years" defaultMessage="Age:" />
+                </span>
+                26
               </li>
               <li className="mb-2">
-                  <span className="font-bold text-gray-700  dark:text-white">Hobbies: </span>Chess, Football
-                  and Programming
+                <span className="font-bold text-gray-700  dark:text-white">
+                  Hobbies:{" "}
+                </span>
+                Chess, Football and Programming
               </li>
               <li className="mb-2">
-                  <span className="font-bold text-gray-700  dark:text-white">Email:</span>{" "}
-                  kevinmsavsani@gmail.com
+                <span className="font-bold text-gray-700  dark:text-white">
+                  Email:
+                </span>{" "}
+                kevinmsavsani@gmail.com
               </li>
               <li className="mb-2">
-                  <span className="font-bold text-gray-700  dark:text-white">
-                    <FormattedMessage id="from" defaultMessage="From:" />
-                  </span>{" "}
-                  Gujarat, India
+                <span className="font-bold text-gray-700  dark:text-white">
+                  <FormattedMessage id="from" defaultMessage="From:" />
+                </span>{" "}
+                Gujarat, India
               </li>
             </ul>
             <div className="flex flex-col py-16 gap-8">

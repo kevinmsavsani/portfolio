@@ -10,7 +10,7 @@ import React from "react";
 import Typical from "react-typical";
 
 const ContactSection: React.FC = () => (
-  <section className=" bg-black bg-opacity-95 py-8" id="contactos">
+  <section id="contact" className=" bg-black bg-opacity-95 py-8">
     <h2 className="text-center text-4xl font-semibold mb-8 text-white">
       Contact
     </h2>

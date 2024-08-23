@@ -10,7 +10,6 @@ import AOS from 'aos';
 const navigation = [
   { name: 'Home', href: 'home', current: true, isScrollLink: true },
   { name: 'About Me', href: 'about', current: false, isScrollLink: true },
-  { name: 'Services', href: 'services', current: false, isScrollLink: true },
   { name: 'Projects', href: 'projects', current: false, isScrollLink: true },
   { name: 'Contact', href: 'contact', current: false, isScrollLink: true },
 ];
