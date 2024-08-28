@@ -1,5 +1,5 @@
 import React, { useState, createContext } from 'react';
-import EnglishMessages from './../language/en.json';
+import EnglishMessages from '../language/en.json';
 import { IntlProvider } from 'react-intl';
 
 const LanguageContext = createContext();
