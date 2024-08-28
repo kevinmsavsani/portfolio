@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container,
-  type ISourceOptions,
 } from "@tsparticles/engine";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
@@ -31,7 +30,7 @@ const PentagonBg = () => {
     console.log(container);
   };
 
-  const options: ISourceOptions = useMemo(
+  const options: any = useMemo(
     () => ({
       particles: {
         number: {
@@ -151,6 +150,7 @@ const PentagonBg = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
+        className="absolute inset-0 w-full h-screen -z-10"
       />
     );
   }
