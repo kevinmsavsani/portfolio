@@ -2,11 +2,11 @@ import {
   faGithub,
   faLinkedin,
   faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 import { faArrowDown as faArrowDownSolid } from '@fortawesome/free-solid-svg-icons'; // Solid arrow up icon
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { Link } from "react-scroll";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { Link } from 'react-scroll';
 
 const Content: React.FC = () => (
   <div className="bg-black w-screen h-screen relative">
@@ -36,7 +36,7 @@ const Content: React.FC = () => (
 
         <div className="flex justify-center space-x-4">
           <a
-            className="flex items-center space-x-2 bg-cyan-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-cyan-600 transition-all duration-300"
+            className="flex items-center space-x-2 bg-cyan-500 text-white hover:px-4 rounded-full shadow-lg hover:bg-cyan-600 transition-all duration-300 group"
             href="https://www.linkedin.com/in/kevin1998/"
             target="_blank"
             rel="noopener noreferrer"
@@ -46,10 +46,12 @@ const Content: React.FC = () => (
             <div className="flex items-center justify-center w-12 h-12 bg-cyan-600 rounded-full">
               <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
             </div>
-            <span>Linkedin</span>
+            <span className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Linkedin
+            </span>
           </a>
           <a
-            className="flex items-center space-x-2 bg-cyan-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-cyan-600 transition-all duration-300"
+            className="flex items-center space-x-2 bg-cyan-500 text-white hover:px-4 rounded-full shadow-lg hover:bg-cyan-600 transition-all duration-300 group"
             href="https://github.com/kevinmsavsani/"
             target="_blank"
             rel="noopener noreferrer"
@@ -59,10 +61,12 @@ const Content: React.FC = () => (
             <div className="flex items-center justify-center w-12 h-12 bg-cyan-600 rounded-full">
               <FontAwesomeIcon icon={faGithub} className="text-2xl" />
             </div>
-            <span>Github</span>
+            <span className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Github
+            </span>
           </a>
           <a
-            className="flex items-center space-x-2 bg-cyan-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-cyan-600 transition-all duration-300"
+            className="flex items-center space-x-2 bg-cyan-500 text-white hover:px-4 rounded-full shadow-lg hover:bg-cyan-600 transition-all duration-300 group"
             href="https://api.whatsapp.com/send?phone=9537960559"
             target="_blank"
             rel="noopener noreferrer"
@@ -72,7 +76,9 @@ const Content: React.FC = () => (
             <div className="flex items-center justify-center w-12 h-12 bg-cyan-600 rounded-full">
               <FontAwesomeIcon icon={faWhatsapp} className="text-2xl" />
             </div>
-            <span>Whatsapp</span>
+            <span className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Whatsapp
+            </span>
           </a>
         </div>
 
