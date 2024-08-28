@@ -2,6 +2,119 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
+const config = [
+  {
+    category: 'Front-End',
+    items: [
+      {
+        name: 'HTML',
+        imgSrc:
+          'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg',
+      },
+      {
+        name: 'CSS',
+        imgSrc:
+          'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg',
+      },
+      {
+        name: 'JavaScript',
+        imgSrc:
+          'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg',
+      },
+      {
+        name: 'Sass',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+      },
+      {
+        name: 'Bootstrap',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+      },
+      {
+        name: 'jQuery',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg',
+      },
+      {
+        name: 'React',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+      },
+      {
+        name: 'Typescript',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+      },
+    ],
+  },
+  {
+    category: 'Back-End',
+    items: [
+      {
+        name: 'NodeJs',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+      },
+      {
+        name: 'Express',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+      },
+      {
+        name: 'PHP',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+      },
+      {
+        name: 'Laravel',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg',
+      },
+      {
+        name: 'MySQL',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg',
+      },
+      {
+        name: 'PostgreSQL',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg',
+      },
+      {
+        name: 'MongoDB',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg',
+      },
+    ],
+  },
+  {
+    category: 'Tools',
+    items: [
+      {
+        name: 'Figma',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+      },
+      {
+        name: 'Photoshop',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg',
+      },
+      {
+        name: 'VS Code',
+        imgSrc:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png',
+      },
+      {
+        name: 'Git',
+        imgSrc:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+      },
+    ],
+  },
+];
+
 const AboutSection = () => {
   return (
     <div className="bg-white text-gray-700 dark:bg-black dark:text-white ">
@@ -70,371 +183,41 @@ const AboutSection = () => {
           </div>
 
           <div
-            className="flex flex-col space-y-8"
+            className="flex flex-col space-y-4"
             data-aos="fade-left"
             data-aos-delay="650"
           >
-            <h3 className="text-2xl font-bold">Skills</h3>
-
-            <motion.div>
-              <h4 className="text-xl font-semibold">Front-End</h4>
-              <div className="flex flex-wrap gap-6 mt-4">
-                <div className="flex flex-col items-center w-16 h-16">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="HTML"
-                    className=""
-                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    HTML
-                  </motion.h5>
+            <h3 className="text-xl text-cyan-500 font-bold pt-4">Skills</h3>
+            {config.map((section, index) => (
+              <motion.div key={index}>
+                <h3 className="text-2xl font-bold">{section.category}</h3>
+                <div className="flex flex-wrap gap-6 m-4">
+                  {section.items.map((item, itemIndex) => (
+                    <div
+                      key={itemIndex}
+                      className="flex flex-col items-center w-16 h-16"
+                    >
+                      <motion.img
+                        initial={{ filter: 'grayscale(100%)' }}
+                        whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
+                        alt={item.name}
+                        src={item.imgSrc}
+                        className="w-16 h-16"
+                      />
+                      <motion.h5
+                        initial={{ opacity: 0, y: 0 }}
+                        whileHover={{ opacity: 1, y: -96 }}
+                        transition={{ duration: 0.3 }}
+                        className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
+                      >
+                        {item.name}
+                      </motion.h5>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="CSS"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    CSS
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="Js"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    JavaScript
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="Sass"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    Sass
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="Bootstrap"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    Bootstrap
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="jQuery"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    jQuery
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="React"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    React
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="Typescript"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    Typescript
-                  </motion.h5>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div>
-              <h4 className="text-xl font-semibold">Back-End</h4>
-              <div className="flex flex-wrap gap-6 mt-4">
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="Nodejs"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    NodeJs
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="express"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    Express
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="php"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    PHP
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="laravel"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    Laravel
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="mysql"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    MySQL
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="postgresql"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    PostgreSQL
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="mongodb"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    MongoDB
-                  </motion.h5>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div>
-              <h4 className="text-xl font-semibold">Tools</h4>
-              <div className="flex flex-wrap gap-6 mt-4">
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="figma"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    Figma
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="photoshop"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    Photoshop
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="Visual Studio Code"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    VS Code
-                  </motion.h5>
-                </div>
-                <div className="flex flex-col items-center">
-                  <motion.img
-                    initial={{ filter: 'grayscale(100%)' }}
-                    whileHover={{ filter: 'grayscale(0%)', scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    alt="git"
-                    className="w-16 h-16 transition-transform transform hover:scale-110"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                  />
-                  <motion.h5
-                    initial={{ opacity: 0, y: 0 }}
-                    whileHover={{ opacity: 1, y: -96 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white text-black text-center py-2 px-2 text-xs rounded-lg"
-                  >
-                    Git
-                  </motion.h5>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
