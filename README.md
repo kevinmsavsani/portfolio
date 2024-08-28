@@ -1,32 +1,6 @@
-Setup App with following basic config -
-react tailwind typescript eslint yarn prettier vite
+## Available Scripts
 
-Icons - 
+In the project directory, you can run:
 
-Tailwind pre config - 
+### `yarn dev`
 
-Dark mode  - 
-
-Responsiveness - 
-
-Navbar - 
-
-Components -
-
-Animation - 
-
-Internationalization - 
-
-
-Good Libraries - 
-react-typical - animated typing
-react-scroll - scroll based animation
-tanstack - table component library
-ahook - api call hooks
-toastify - toast for showing notification
-
-
-Auth - 
-
-Monitoring - 
-sentry
