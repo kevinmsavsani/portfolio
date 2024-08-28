@@ -3,10 +3,11 @@ import {
   faLinkedin,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
-import { faArrowDown as faArrowDownSolid } from '@fortawesome/free-solid-svg-icons'; // Solid arrow up icon
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'; // Solid arrow up icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 const Content: React.FC = () => (
   <div className="bg-black w-screen h-screen relative">
@@ -86,10 +87,24 @@ const Content: React.FC = () => (
           to="about"
           smooth={true}
           duration={500}
-          className="absolute bottom-20 left-1/2 cursor-pointer border-2 border-white rounded-full h-12 w-8 flex items-center justify-center"
+          className="absolute bottom-20 left-1/2 cursor-pointer border-2 border-white rounded-full h-12 w-8 overflow-hidden"
           data-aos="fade-up"
         >
-          <FontAwesomeIcon icon={faArrowDownSolid} className="text-white" />
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center"
+            animate={{ y: ['-100%', '100%'] }}
+            transition={{
+              y: {
+                duration: 2,
+                repeat: Infinity,
+                yoyo: true, // This will make the animation bounce between the start and end values
+                ease: 'easeInOut',
+              },
+            }}
+          >
+            <FontAwesomeIcon icon={faChevronDown} className="text-white" />
+            <FontAwesomeIcon icon={faChevronDown} className="text-white" />
+          </motion.div>
         </Link>
       </div>
     </section>
