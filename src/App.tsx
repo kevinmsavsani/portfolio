@@ -8,6 +8,7 @@ import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import PentagonBg from './components/PentagonBg';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <AboutSection />
         <ProjectsSection />
         <ContactSection />
+        <PentagonBg />
       </main>
       <Footer />
     </div>
