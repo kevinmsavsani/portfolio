@@ -15,6 +15,8 @@ Components -
 
 Animation - 
 
+Internationalization - 
+
 
 Good Libraries - 
 react-typical - animated typing
