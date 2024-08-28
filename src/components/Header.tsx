@@ -43,11 +43,11 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <Disclosure as="nav" className="fixed top-0 left-0 right-0 z-[1000] text-xl bg-white text-gray-950 flex items-center justify-between px-[8%] py-2 dark:bg-black dark:text-white font-bold shadow-lg">
+    <Disclosure as="nav" className="fixed top-0 left-0 right-0 z-[1000] text-md bg-white text-gray-950 flex items-center justify-between px-[8%] py-2 dark:bg-black dark:text-white font-bold shadow-lg">
       {({ open }) => (
         <>
           <div className="w-full px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-12 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-700  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
                           >
                             {item.name}
                             {activeLink === item.name && (
-                              <div className="absolute bottom-0 left-0 top-12 w-full h-1 bg-cyan-500 transition-transform duration-1000" style={{ transform: `scaleX(${activeLink === item.name ? 1 : 0})` }} />
+                              <div className="absolute bottom-0 left-0 top-8 w-full h-1 bg-cyan-500 transition-transform duration-1000" style={{ transform: `scaleX(${activeLink === item.name ? 1 : 0})` }} />
                             )}
                           </ScrollLink>
                         ) : (

@@ -21,7 +21,7 @@ const App: React.FC = () => {
     <div>
       <Header />
 
-      <main className="mx-auto mt-16">
+      <main className="mt-12">
         <HomeSection />
         <AboutSection />
         <ProjectsSection />
