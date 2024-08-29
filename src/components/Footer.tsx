@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-white dark:bg-black dark:text-white border-t-3 border-gray-200 shadow-md py-8 px-32 opacity-[90]">
       <div className="flex justify-between items-center">
-        <div className="text-lg py-8 px-8">
+        <div className="text-sm py-8 px-8">
           <p>
             <footer>Page created by Kevin</footer>
           </p>
