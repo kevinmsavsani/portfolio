@@ -7,11 +7,10 @@ import { FormattedMessage } from 'react-intl';
 
 /* Swiper */
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import 'swiper/css/pagination';
 
 import { Button } from '@headlessui/react';
 
@@ -108,8 +107,8 @@ export const projects = [
 
 const ProjectsSection: React.FC = () => {
   return (
-        <section id="projects">
-            <h2 className="text-4xl font-bold text-center mb-8">
+        <section id="projects" className='bg-black py-12'>
+            <h2 className="text-white text-4xl font-bold text-center mb-8">
                 <FormattedMessage
                     id='projects'
                     defaultMessage='Projects'
@@ -125,10 +124,7 @@ const ProjectsSection: React.FC = () => {
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[Pagination, Autoplay]}
+                    modules={[Autoplay]}
                     breakpoints={{
                         0: {
                             slidesPerView: 1,
@@ -161,7 +157,7 @@ const ProjectsSection: React.FC = () => {
                     ))}
                 </Swiper>
             </div>
-            <div className='flex justify-center items-center w-full h-full my-4'>
+            <div className='flex justify-center items-center w-full h-full'>
                 <Link to="/project">
                     <Button />
                 </Link>
