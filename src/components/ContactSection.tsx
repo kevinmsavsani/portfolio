@@ -3,11 +3,11 @@ import {
   faLinkedinIn,
   faTelegram,
   faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import Typical from "react-typical";
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import Typical from 'react-typical';
 
 const ContactSection: React.FC = () => (
   <section id="contact" className=" bg-black bg-opacity-95 py-8">
@@ -25,18 +25,18 @@ const ContactSection: React.FC = () => (
           loop={Infinity}
           wrapper="b"
           steps={[
-            "Gmail",
+            'Gmail',
             1500,
-            "WhatsApp",
-            1500,
-            "Instagram",
-            1500,
-            "Telegram",
-            1500,
-            "LinkedIn",
-            1500,
-            "GitHub",
-            1500,
+            'WhatsApp',
+            3000,
+            'Instagram',
+            4500,
+            'Telegram',
+            3000,
+            'LinkedIn',
+            4500,
+            'GitHub',
+            3000,
           ]}
         />
       </span>
@@ -80,34 +80,34 @@ const ContactSection: React.FC = () => (
 
 const contactLinks = [
   {
-    href: "mailto:kevinmsavsani@gmail.com",
+    href: 'mailto:kevinmsavsani@gmail.com',
     iconClass: faEnvelope,
-    label: "Gmail",
-    colorClass: "text-red-600 border-red-600 hover:shadow-red-600",
+    label: 'Gmail',
+    colorClass: 'text-red-600 border-red-600 hover:shadow-red-600',
   },
   {
-    href: "https://api.whatsapp.com/send?phone=9537960559",
+    href: 'https://api.whatsapp.com/send?phone=9537960559',
     iconClass: faWhatsapp,
-    label: "WhatsApp",
-    colorClass: "text-green-500 border-green-500 hover:shadow-green-500",
+    label: 'WhatsApp',
+    colorClass: 'text-green-500 border-green-500 hover:shadow-green-500',
   },
   {
-    href: "https://web.telegram.org/a/#816371304",
+    href: 'https://web.telegram.org/a/#816371304',
     iconClass: faTelegram,
-    label: "Telegram",
-    colorClass: "text-blue-500 border-blue-500 hover:shadow-blue-500",
+    label: 'Telegram',
+    colorClass: 'text-blue-500 border-blue-500 hover:shadow-blue-500',
   },
   {
-    href: "https://www.linkedin.com/in/kevin1998/",
+    href: 'https://www.linkedin.com/in/kevin1998/',
     iconClass: faLinkedinIn,
-    label: "LinkedIn",
-    colorClass: "text-blue-700 border-blue-700 hover:shadow-blue-700",
+    label: 'LinkedIn',
+    colorClass: 'text-blue-700 border-blue-700 hover:shadow-blue-700',
   },
   {
-    href: "https://github.com/kevinmsavsani/",
+    href: 'https://github.com/kevinmsavsani/',
     iconClass: faGithubSquare,
-    label: "GitHub",
-    colorClass: "text-black border-black hover:shadow-black",
+    label: 'GitHub',
+    colorClass: 'text-black border-black hover:shadow-black',
   },
 ];
 
