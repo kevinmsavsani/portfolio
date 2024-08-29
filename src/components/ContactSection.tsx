@@ -42,35 +42,42 @@ const ContactSection: React.FC = () => (
       </span>
     </h3>
 
-    <div className="flex flex-wrap justify-center mt-24 space-x-4">
+    <div className="flex flex-wrap justify-center mt-24 gap-16">
       {contactLinks.map(({ href, iconClass, label, colorClass }, index) => (
         <a
           key={index}
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative block m-10 text-white transform transition-transform hover:rotate-[-35deg] hover:skew-y-[20deg] group"
+          className="relative block text-white transform transition-transform group"
           data-aos="zoom-in"
         >
           <div
-            className={`relative w-28 h-28 ${colorClass} flex items-center justify-center transform transition-transform duration-300 group-hover:translate-y-[-10px] group-hover:translate-x-[10px] group-hover:rotate-[5deg] group-hover:shadow-lg group-hover:shadow-black`}
+            className={`relative ${colorClass} flex items-center justify-center transform transition-transform duration-300 group-hover:rotate-[-35deg] group-hover:skew-y-[20deg]`}
           >
-            {[...Array(5)].map((_, idx) => (
-              <span
-                key={idx}
-                className="absolute inset-0 w-full h-full border-3 border-current rounded-md transition-transform duration-300"
-                style={{
-                  transform: `translate(${idx * 5}px, ${-idx * 5}px)`,
-                  boxShadow: `${idx * 2}px ${
-                    -idx * 2
-                  }px 10px rgba(0, 0, 0, 0.2)`,
-                }}
-              ></span>
-            ))}
-            <FontAwesomeIcon icon={iconClass} className="text-4xl" />
-            <div className="absolute left-1/2 bottom-[-10px] transform -translate-x-1/2 text-2xl font-semibold opacity-0 transition-opacity ease-in-out duration-300 group-hover:opacity-100">
-              {label}
+            <span
+              className={`hidden group-hover:block absolute w-16 h-16 border-2 rounded-md ${colorClass} translate-x-0.5 translate-y-0.5 opacity-80`}
+            />
+            <span
+              className={`hidden group-hover:block absolute w-16 h-16 border-2 rounded-md ${colorClass} translate-x-1 translate-y-1 opacity-60`}
+            />
+            <span
+              className={`hidden group-hover:block absolute w-16 h-16 border-2 rounded-md ${colorClass} translate-x-1.5 translate-y-1.5 opacity-40`}
+            />
+            <span
+              className={`hidden group-hover:block absolute w-16 h-16 border-2 rounded-md ${colorClass} translate-x-2 translate-y-2 opacity-20`}
+            />
+            <div className={`border-2 rounded-md p-3 ${colorClass}`}>
+              <FontAwesomeIcon
+                icon={iconClass}
+                className={`text-4xl ${colorClass}`}
+              />
             </div>
+          </div>
+          <div
+            className={`absolute left-1/2 bottom-[-40px] transform -translate-x-1/2 text-lg font-semibold opacity-0 transition-opacity ease-in-out duration-300 group-hover:opacity-100 ${colorClass}`}
+          >
+            {label}
           </div>
         </a>
       ))}
@@ -107,7 +114,7 @@ const contactLinks = [
     href: 'https://github.com/kevinmsavsani/',
     iconClass: faGithubSquare,
     label: 'GitHub',
-    colorClass: 'text-black border-black hover:shadow-black',
+    colorClass: 'text-white border-white hover:shadow-white',
   },
 ];
 
