@@ -1,10 +1,10 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedin,
   faGithub,
   faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp as faArrowUpSolid } from '@fortawesome/free-solid-svg-icons'; // Solid arrow up icon
 
 // Define the Footer component
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-white dark:bg-black dark:text-white border-t-3 border-gray-200 shadow-md py-8 px-32 opacity-[90]">
+    <footer className="bg-white dark:bg-black dark:text-white border-t-2 border-gray-200 shadow-md py-8 px-32 opacity-[90]">
       <div className="flex justify-between items-center">
         <div className="text-sm py-8 px-8">
           <p>
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
         </div>
         <a
           href="#home" // Replace with the actual home URL or route if necessary
-          className="flex text-3xl text-black rounded-full bg-white h-14 w-14 items-center justify-center"
+          className="flex text-3xl dark:bg-gray-500 bg-gray-200 rounded-full h-14 w-14 items-center justify-center"
         >
           <FontAwesomeIcon icon={faArrowUpSolid} />
         </a>

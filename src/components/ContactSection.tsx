@@ -10,12 +10,12 @@ import React from 'react';
 import Typical from 'react-typical';
 
 const ContactSection: React.FC = () => (
-  <section id="contact" className=" bg-black bg-opacity-95 py-8">
-    <h2 className="text-center text-4xl font-semibold mb-8 text-white">
+  <section id="contact" className=" bg-white text-gray-700 dark:bg-black dark:text-white py-8">
+    <h2 className="text-center text-4xl font-semibold mb-8 ">
       Contact
     </h2>
     <h3
-      className="text-3xl font-normal text-white mb-16 px-16"
+      className="text-3xl font-normal mb-16 px-16"
       data-aos="fade-left"
       data-aos-delay="300"
     >
@@ -49,7 +49,7 @@ const ContactSection: React.FC = () => (
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative block text-white transform transition-transform group"
+          className="relative block transform transition-transform group"
           data-aos="zoom-in"
         >
           <div
@@ -114,7 +114,7 @@ const contactLinks = [
     href: 'https://github.com/kevinmsavsani/',
     iconClass: faGithubSquare,
     label: 'GitHub',
-    colorClass: 'text-white border-white hover:shadow-white',
+    colorClass: 'dark:text-white dark:border-white dark:hover:shadow-white text-black border-black',
   },
 ];
 

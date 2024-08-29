@@ -118,7 +118,7 @@ const config = [
 const AboutSection = () => {
   return (
     <div className="bg-white text-gray-700 dark:bg-black dark:text-white ">
-      <h2 className="text-center text-4xl font-semibold pt-8 pb-2 text-white">
+      <h2 className="text-center text-4xl font-semibold pt-8 pb-2">
         About me
       </h2>
       <section className="p-4" id="about">

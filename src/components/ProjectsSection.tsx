@@ -124,8 +124,8 @@ export const projects = [
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section id="projects" className="bg-black py-12">
-      <h2 className="text-white text-4xl font-bold text-center mb-8">
+    <section id="projects" className="bg-white text-gray-700 dark:bg-black dark:text-white py-12">
+      <h2 className="text-4xl font-bold text-center mb-8">
         <FormattedMessage id="projects" defaultMessage="Projects" />
       </h2>
       <div
@@ -165,7 +165,7 @@ const ProjectsSection: React.FC = () => {
               />
               <div className="slide-content transform scale-0 pt-4 transition-transform duration-300 ease-in-out swiper-slide-active:transform flex flex-col gap-4">
                 <div className='flex flex-col gap-1'>
-                  <h3 className="text-2xl text-white font-bold">
+                  <h3 className="text-2xl font-bold">
                     {project.title}
                   </h3>
                   <p className="text-sm text-gray-500">
@@ -178,7 +178,7 @@ const ProjectsSection: React.FC = () => {
                 <div className='flex w-full items-center justify-center gap-2'>
                   <a
                     href={project.demoLink}
-                    className="mx-2 px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-700 transition"
+                    className="mx-2 px-4 py-2 bg-cyan-500 rounded hover:bg-cyan-700 transition"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -186,7 +186,7 @@ const ProjectsSection: React.FC = () => {
                   </a>
                   <a
                     href={project.repoLink}
-                    className="mx-2 px-4 py-2 border-2 border-white text-white rounded transition"
+                    className="mx-2 px-4 py-2 border-2 border-black dark:border-white rounded transition"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
